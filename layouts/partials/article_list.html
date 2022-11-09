@@ -1,0 +1,5 @@
+{{- range .Site.RegularPages }}
+{{- if (ne .Params.hidden true) }}
+    {{ partial "post_summary.html" . }}
+{{ end -}}
+{{ end -}}

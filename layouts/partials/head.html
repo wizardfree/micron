@@ -1,0 +1,18 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <title>{{ if isset .Params "slug" }} {{.Page.Slug}} | {{ .Site.Title }} {{ else }} {{ .Site.Title }} {{ end }}</title>
+
+  {{ $style := resources.Get "css/styles.css" | minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+  {{ $applefavicon := resources.Get "images/apple-touch-icon.webp" }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ $applefavicon.RelPermalink }}" />
+  {{ $favicon32 := resources.Get "images/favicon-32x32.webp" }}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32.RelPermalink }}" />
+  {{ $favicon16 := resources.Get "images/favicon-16x16.webp" }}
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16.RelPermalink }}" />
+</head>

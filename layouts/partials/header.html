@@ -1,0 +1,30 @@
+<nav class="centered">
+  <a href="/">
+    {{ $branding := resources.Get "images/wizardv2.webp" }}
+    <img src="{{ $branding.RelPermalink }}" alt="" width="32px"
+    height="32px" />
+  </a>
+  <h4>{{ .Site.Title }}</h4>
+</nav>
+
+<!-- <hr> -->
+
+<div class="centered">
+  {{ if .Params.Date }}
+  <h4>{{ .Page.Title }}</h4>
+  <!-- <span>Intentially Left Blank</span> -->
+  <h5>{{ .Date.Format "January 2, 2006" }}</h5>
+  {{ else }}
+  <span>[</span>
+  <a href="/archive">archive</a>
+  <span>]</span>
+  <span>[</span>
+  <a href="/about">about</a>
+  <span>]</span>
+  <span>[</span>
+  <a href="https://mega.nz/file/qUkVRLaQ#UdPUdL6yjVf8DV5Wlcd5Py_nLAUyS6YrsYg7oZ3O3R4"
+    target="_blank"
+    >resume</a>
+  <span>]</span>
+  {{ end }}
+</div>

@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ range .Pages.ByDate.Reverse }}
+<ul>
+  {{ if (ne .Params.hidden true) }}
+  {{ partial "post_summary.html" . }}
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}
