@@ -12,7 +12,8 @@ html {
 
 img:not(nav a img),
 pre,
-blockquote {
+blockquote,
+.video-player {
   max-width: 100%;
   overflow-x: auto;
   border-radius: 1em;
