@@ -19,7 +19,7 @@ blockquote,
   border-radius: 1em;
 }
 
-pre,
+pre:not(footer pre),
 blockquote {
   padding: 1em;
   position: relative;
@@ -38,11 +38,6 @@ a:visited {
 
 ul li {
   list-style-type: "> ";
-}
-
-nav:not(#TableOfContents) li {
-  display: inline;
-  margin: 1em;
 }
 
 .centered {
