@@ -7,16 +7,16 @@
   <h4>{{ .Site.Title }}</h4>
 </nav>
 
-<!-- <hr> -->
-
 <div class="centered">
   {{ if .Params.Date }}
   <h4>{{ .Page.Title }}</h4>
-  <!-- <span>Intentially Left Blank</span> -->
   <h5>{{ .Date.Format "January 2, 2006" }}</h5>
   {{ else }}
   <span>[</span>
   <a href="/archive">archive</a>
+  <span>]</span>
+  <span>[</span>
+  <a href="/links">links</a>
   <span>]</span>
   <span>[</span>
   <a href="/about">about</a>
