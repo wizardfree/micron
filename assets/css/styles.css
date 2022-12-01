@@ -32,12 +32,8 @@ a {
   color: #3498db;
 }
 
-a:visited {
-  color: #9b59b6;
-}
-
 ul li {
-  list-style-type: "> ";
+  list-style-type: "➜ ";
 }
 
 .centered {
