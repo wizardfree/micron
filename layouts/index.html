@@ -1,3 +1,16 @@
 {{ define "main" }}
-{{- partial "article_list.html" . -}}
+
+{{ .Content }}
+
+<hr>
+
+<h4>Latest posts:</h4>
+<ul>
+{{ range .Pages.ByDate.Reverse | first 3 }}
+    <li>
+        {{ partial "post_summary.html" . }}
+    </li>
+{{ end }}
+</ul>
+
 {{ end }}
