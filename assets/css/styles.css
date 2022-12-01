@@ -64,7 +64,7 @@ ul li {
 @media (prefers-color-scheme: dark) {
   html,
   body {
-    color: #ddd;
-    background-color: #282a36;
+    color: #ebdbb2;
+    background-color: #3c3836;
   }
 }
