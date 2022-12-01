@@ -1,5 +1,2 @@
-<h4>
-    [  {{ .Date.Format "02/01/2006" }}  ]
-    ~
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-</h4>
+{{ .PublishDate.Format "02 Jan" }} &squf;
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
