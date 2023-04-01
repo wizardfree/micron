@@ -1,19 +1,9 @@
 {{ define "main" }}
-<aside>
-  <hr>
-  Tags:
-  {{ range .Params.tags }}
-  <span>[</span>
-  <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-  <span>]</span>
-  {{ end }}
-</aside>
+<hr />
 {{ if (.Params.toc) }}
 <h4>Table Of Contents:</h4>
 {{ .TableOfContents }}
 {{ end }}
-<article>
-  {{ .Content }}
-</article>
-</div>
+<br>
+{{ .Content }}
 {{ end }}

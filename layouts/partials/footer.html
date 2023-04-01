@@ -1,11 +1,5 @@
 <hr>
 <footer>
-    <pre>
-                \   ^__^
-                 \  (oo)\_______
-                    (__)\       )\/\
-                        ||----w |
-                        ||     ||
-        
-    </pre>
+    {{ $branding := resources.Get "images/wizardv2.webp" }}
+    <a href="/"><img src="{{ $branding.RelPermalink }}" alt="Wizard Branding"></a>
 </footer>

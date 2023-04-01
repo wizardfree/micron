@@ -1,4 +1,5 @@
 {{ define "main" }}
+<h3>Posts containing: <code>{{.Title}}</code></h3>
 {{ range .Pages.ByDate.Reverse }}
 <ul>
   {{ if (ne .Params.hidden true) }}

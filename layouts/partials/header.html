@@ -1,17 +1,25 @@
-<a href="/"><h4>{{ .Site.Title }}</h4></a>
+
+  <h4><a href="/">{{ .Site.Title }}</a></h4>
+  <nav>
+  <span>
+    <span>[</span>
+    <a href="/archive">archive</a>
+    <span>]</span>
+    <span>[</span>
+    <a href="/links">links</a>
+    <span>]</span>
+    <span>[</span>
+    <a href="/certs">certifications</a>
+    <span>]</span>
+  </span>
+</nav>
+<hr />
 
 {{ if .Params.Date }}
-<h3>{{ .Page.Title }} &squf; {{ .Date.Format "January 2, 2006" }}</h3>
-{{ else }}
-<span>[</span>
-<a href="/archive">archive</a>
-<span>]</span>
-<span>[</span>
-<a href="/links">links</a>
-<span>]</span>
-<span>[</span>
-<a href="https://mega.nz/file/qUkVRLaQ#UdPUdL6yjVf8DV5Wlcd5Py_nLAUyS6YrsYg7oZ3O3R4"
-  target="_blank"
-  >resume</a>
-<span>]</span>
+  <h2>{{ .Page.Title }}</h2>
+  <code>{{ .Date.Format "January 2, 2006" }}</code>
+  &squf;
+    {{ range .Params.tags }}
+    <a href="/tags/{{ . | urlize }}"><code>{{ . }}</code></a>
+    {{ end }}
 {{ end }}
