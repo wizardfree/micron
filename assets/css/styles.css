@@ -1,30 +1,87 @@
-body {
-  margin: 1em auto;
-  padding: 0 .62em;
-  font: 1.2em/1.62 sans-serif;
+html {
+  max-width: 44rem;
+  margin: auto;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  line-height: 1.5em;
+  background-color: #FFFDFA;
+  color: #1d1d1d;
 }
 
-h1, h2, h3 {
-  line-height: 1.2
+h1,
+h2,
+h3,
+h4:not(nav *),
+h5,
+h6 {
+  margin: 2rem 0 1rem;
+  font-weight: 700;
 }
 
-body, img, .video-player, .chroma {
-  width: 40em;
-  max-width: 100%;
-  border-radius: 0.5em;
-  overflow-x: auto;
+p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #1d1d1d;
+  font-weight: 400;
 }
 
-.chroma {
+blockquote {
+  padding: 1rem;
+  background-color: #B2DFDB;
+  border-radius: 0.5rem;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.gif {
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+img:not(footer img),
+.video-player,
+.highlight {
+  margin: 1rem auto;
   width: 100%;
-  padding: 2em 0.5em;
+  border-radius: 0.5rem;
+  overflow: auto;
+  border: 0.2rem #1d1d1d solid;
 }
 
+footer {
+  width: 5rem;
+  margin: auto;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+code:not([class*="language"], .chroma > code) {
+  font-size: 0.8rem;
+  font-style: italic;
+  background-color: #1d1d1d;
+  color: #FFFDFA;
+  padding: 0.1rem 0.4rem 0.2rem 0.3rem;
+  border-radius: 0.5rem;
+}
+
+/* Thanks to https://avexdesigns.com/blog/responsive-youtube-embed for the responsive YouTube HTML/CSS */
 .video-player {
-  /* https://avexdesigns.com/blog/responsive-youtube-embed */
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 30px;
+  padding-top: 2rem;
   height: 0;
   overflow: hidden;
 }
@@ -39,28 +96,35 @@ body, img, .video-player, .chroma {
   height: 100%;
 }
 
-@media print {
-  body {
-      max-width: none
-  }
+a:not(nav h4 *, footer *, [class*="footnote-backref"]):before {
+  content: '»';
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-      color: #ebdbb2;
-      background: #3c3836
-  }
+a:not(nav h4 *, footer *, [class*="footnote-backref"]):after {
+  content: '«';
+}
 
-  a:link {
-      color: #458588
-  }
+/* Thanks to github.com/cjpatoilo for the Table CSS */
+table {
+  border-spacing: 0;
+  display: block;
+  overflow-x: auto;
+  text-align: left;
+  width: 100%;
+}
 
-  a:hover,
-  a:visited:hover {
-      color: #699d6a
-  }
+td,
+th {
+  border-bottom: .1rem solid #BDC3C7;
+  padding: 1.2rem 1.5rem;
+}
 
-  a:visited {
-      color: #b16286
-  }
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
 }
