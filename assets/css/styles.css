@@ -1,7 +1,7 @@
 html {
   max-width: 44rem;
   margin: auto;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: #FFFDFA;
   color: #1d1d1d;
@@ -127,4 +127,12 @@ th:first-child {
 td:last-child,
 th:last-child {
   padding-right: 0;
+}
+
+kbd {
+  background-color: #BDC3C7;
+  color: #1d1d1d;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
 }
