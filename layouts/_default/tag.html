@@ -1,9 +1,9 @@
 {{ define "main" }}
-<h3>Posts containing: <code>{{.Title}}</code></h3>
+<h3>Posts tagged: <u>{{.Title}}</u></h3>
 {{ range .Pages.ByDate.Reverse }}
 <ul>
   {{ if (ne .Params.hidden true) }}
-  {{ partial "post_summary.html" . }}
+    <li>{{ partial "post_summary.html" . }}</li>
   {{ end }}
 </ul>
 {{ end }}

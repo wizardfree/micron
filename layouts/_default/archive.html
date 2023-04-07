@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="content">
+<h2>{{.Page.Title}}</h2>
   {{ range (.Site.RegularPages.GroupByDate "2006") }} {{ if (gt .Key 1) }}
   <h3>[{{ .Key }}]</h3>
   {{ end }}
@@ -11,5 +11,4 @@
     {{ end }} {{ end }}
   </ul>
   {{ end }}
-</main>
 {{ end }}

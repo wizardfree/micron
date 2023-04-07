@@ -1,25 +1,20 @@
-
-  <h4><a href="/">{{ .Site.Title }}</a></h4>
-  <nav>
-  <span>
-    <span>[</span>
-    <a href="/archive">archive</a>
-    <span>]</span>
-    <span>[</span>
-    <a href="/links">links</a>
-    <span>]</span>
-    <span>[</span>
-    <a href="/certs">certifications</a>
-    <span>]</span>
-  </span>
-</nav>
+<h3><a href="/">{{ .Site.Title }}</a></h3>
+<a href="/archive">archive</a>
+&nbsp;
+<a href="/links">links</a>
+&nbsp;
+<a href="/tags">tags</a>
+&nbsp;
+<a href="/certs">certifications</a>
 <hr />
-
 {{ if .Params.Date }}
-  <h2>{{ .Page.Title }}</h2>
-  <code>{{ .Date.Format "January 2, 2006" }}</code>
-  &squf;
-    {{ range .Params.tags }}
-    <a href="/tags/{{ . | urlize }}"><code>{{ . }}</code></a>
-    {{ end }}
+<h2>{{ .Page.Title }}</h2>
+<i>{{ .Date.Format "January 2, 2006" }}</i>
+&nbsp;
+&squf;
+&nbsp;
+{{ range .Params.tags }}
+<a href="/tags/{{ . | urlize }}">{{ . }}</a>
+&nbsp;
+{{ end }}
 {{ end }}

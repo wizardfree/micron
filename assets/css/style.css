@@ -14,13 +14,14 @@ hr {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 blockquote {
+  padding: 1rem;
   background-color: #FFEBEE;
-  padding: 0.5rem;
-  font-style: italic;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 table {

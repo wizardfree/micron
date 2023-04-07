@@ -1,7 +1,13 @@
 {{ define "main" }}
-    <ul>
-        {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
+<h2>{{.Page.Title}} 🔖</h2>
+<ul>
+    {{ range $.Site.Taxonomies.tags.ByCount }}
+    {{ if gt .Count 1 }}
+      <li>
+        <a href="/tags/{{ .Name }}">{{ .Name }}</a>
+        <small>({{ .Count }})</small>
+      </li>
+    {{ end }}
+    {{end}}
     </ul>
 {{ end }}

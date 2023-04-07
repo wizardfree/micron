@@ -6,10 +6,8 @@
   <meta name="description" content="{{ .Site.Params.description }}" />
   <title>{{ if isset .Params "slug" }} {{.Page.Slug}} ▪ {{ .Site.Title }} {{ else }} {{ .Site.Title }} {{ end }}</title>
 
-  {{ $style := resources.Get "css/styles.css" | minify }}
+  {{ $style := resources.Get "css/style.css" | minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-  {{ $syntax := resources.Get "css/syntax.css" | minify }}
-  <link rel="stylesheet" href="{{ $syntax.Permalink }}" integrity="{{ $syntax.Data.Integrity }}">
 
   {{ $applefavicon := resources.Get "images/apple-touch-icon.webp" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $applefavicon.RelPermalink }}" />
