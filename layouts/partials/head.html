@@ -7,7 +7,7 @@
   <title>{{ if isset .Params "slug" }} {{.Page.Slug}} ▪ {{ .Site.Title }} {{ else }} {{ .Site.Title }} {{ end }}</title>
 
   {{ $style := resources.Get "css/style.css" | minify }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
   {{ $applefavicon := resources.Get "images/apple-touch-icon.webp" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $applefavicon.RelPermalink }}" />
