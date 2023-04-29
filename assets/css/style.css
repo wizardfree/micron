@@ -1,26 +1,33 @@
 html {
-  max-width: 64ch;
-  padding: 3rem 1rem;
+  max-width: 70ch;
+  padding: 3em 1em;
   margin: auto;
-  line-height: 1.75 !important;
-  font-size: 1.25rem;
+  line-height: 1.75;
+  font-size: 1.25em;
+  font-family: sans-serif;
+}
+
+p,
+ul:not(ul *),
+ol:not(ol *) {
+  margin-bottom: 2em;
   color: #1d1d1d;
   font-family: sans-serif;
 }
 
-hr {
-  margin: 2rem 0;
+table, code:not(td > pre *, [class^="language-"]), img, mark, a {
+  border: 1px solid #E0E0E0;
+  border-radius: 0.2rem;
 }
 
 img {
-  width: 100%;
+width: 100%;
 }
 
-blockquote {
-  padding: 1rem;
-  background-color: #FFEBEE;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+code:not(td > pre *, [class^="language-"]) {
+  padding: .3rem;
+  background-color: #eee;
+  border: 1px solid #E0E0E0;
 }
 
 table {
@@ -31,13 +38,27 @@ table {
   width: 100%;
 }
 
-td,
+td:not([class^="highlight"] *),
 th {
+  width: 100%;
   padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #eee;
 }
 
-code:not(td > pre *, [class^="language-"]) {
-  padding: 0.3rem;
-  background-color: #EEEEEE;
-  font-size: 0.8rem;
+blockquote {
+  padding: 1em;
+  border-left: 0.2rem solid #E74C3C;
+  font-style: italic;
+}
+
+mark, a {
+  padding: 0.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+margin: 2rem 0;
 }
