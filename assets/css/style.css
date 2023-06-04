@@ -1,6 +1,6 @@
 html {
   max-width: 70ch;
-  padding: 3em 1em;
+  padding: 1em;
   margin: auto;
   line-height: 1.75;
   font-size: 1.25em;
@@ -10,12 +10,12 @@ html {
 p,
 ul:not(ul *),
 ol:not(ol *) {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   color: #1d1d1d;
   font-family: sans-serif;
 }
 
-table, code:not(td > pre *, [class^="language-"]), img, mark, a {
+table, code:not(td > pre *, [class^="language-"]), img, mark, a, .highlight, blockquote {
   border: 1px solid #E0E0E0;
   border-radius: 0.2rem;
 }
@@ -46,8 +46,8 @@ th {
 }
 
 blockquote {
+  margin: 0rem;
   padding: 1em;
-  border-left: 0.2rem solid #E74C3C;
   font-style: italic;
 }
 
@@ -60,5 +60,43 @@ a {
 }
 
 hr {
-margin: 2rem 0;
+  margin: 2rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html {
+    background-color: #1d2021;
+    color: #fbf1c7;
+  }
+  
+  p,
+  ul:not(ul *),
+  ol:not(ol *) {
+    color: #fbf1c7;
+  }
+  
+  table, code:not(td > pre *, [class^="language-"]), img, mark, a, .highlight, blockquote {
+    border: 1px solid #fbf1c7;
+  }
+  
+  code:not(td > pre *, [class^="language-"]) {
+    background-color: #fbf1c7;
+    color: #1d2021;
+    border: 1px solid #1d2021;
+  }
+  
+  td:not([class^="highlight"] *),
+  th {
+    border-bottom: 1px solid #fbf1c7;
+  }
+
+  a {
+    color: #458588;
+  }
+
+  a:visited {
+    color: #b16286;
+  }
+
 }
