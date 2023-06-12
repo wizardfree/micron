@@ -5,7 +5,7 @@
     {{ if gt .Count 1 }}
       <li>
         <a href="/tags/{{ .Name }}">{{ .Name }}</a>
-        <small>({{ .Count }})</small>
+        <sup>({{ .Count }})</sup>
       </li>
     {{ end }}
     {{end}}

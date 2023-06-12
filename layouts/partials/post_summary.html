@@ -1,2 +1,10 @@
-{{ .PublishDate.Format "02 Jan" }} &squf;
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<p>
+    <b>
+        <time datetime={{ .PublishDate.Format "02 Jan" }} pubdate>
+            {{ .PublishDate.Format "02 Jan" }}
+        </time>
+    </b>
+    <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+    </a>
+</p>

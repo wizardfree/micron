@@ -1,20 +1,27 @@
-<h3><a href="/">{{ .Site.Title }}</a></h3>
-<a href="/archive">archive</a>
+<h3><a href="/">{{ .Site.Title }}</a> <span><a href="/archive">archive</a>
+    &nbsp;
+    &squf;
+    &nbsp;
+        <a href="/links">links</a>
+        &nbsp;
+&squf;
 &nbsp;
-<a href="/links">links</a>
+        <a href="/tags">tags</a>
+        &nbsp;
+&squf;
 &nbsp;
-<a href="/tags">tags</a>
-&nbsp;
-<a href="/certs">certifications</a>
-<hr />
+        <a href="/certs">certifications</a></span></h3>
+
 {{ if .Params.Date }}
 <h2>{{ .Page.Title }}</h2>
 <i>{{ .Date.Format "January 2, 2006" }}</i>
+
+{{ with .Params.tags }}
 &nbsp;
-&squf;
-&nbsp;
-{{ range .Params.tags }}
-<a href="/tags/{{ . | urlize }}">{{ . }}</a>
-&nbsp;
+{{ range $i, $e := . }}
+  {{ if $i }}&nbsp;&squf;&nbsp;{{ end }}
+  <a href="{{ "tags/" | absURL }}{{ $e | urlize }}" rel="tag">{{ $e }}</a>
 {{ end }}
+{{ end }}
+
 {{ end }}
