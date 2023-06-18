@@ -60,3 +60,8 @@ h3 span {
   font-size: 0.8em;
   font-weight: normal;
 }
+
+blockquote {
+  border-left: 2px #1d1d1d solid;
+  padding-left: 0.5rem;
+}
