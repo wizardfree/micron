@@ -3,7 +3,16 @@ html {
   padding: 3em 1em;
   margin: auto;
   font-size: 1.15em;
+  line-height: 1.45;
   font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 3em 0 1em;
+}
+
+h2:first-of-type {
+  margin: 1em 0;
 }
 
 li {
