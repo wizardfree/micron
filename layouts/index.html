@@ -2,7 +2,8 @@
 
 {{ .Content }}
 
-<h4>Latest posts:</h4>
+<br>
+<b>Latest posts:</b>
 <ul>
 {{ with .Site.GetPage "/posts" }}
     {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.hidden" "!=" true))}}
