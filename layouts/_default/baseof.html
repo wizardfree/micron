@@ -1,4 +1,5 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 {{- partial "head.html" . -}}
 
 <body>
@@ -27,7 +28,7 @@
     <h2>{{ .Page.Title }}</h2>
   </header>
   {{ if .Params.img }}
-  <img alt="{{ .Params.imgAlt }}" src="{{ .Params.img | relURL }}" />
+  <img alt="{{ .Params.imgAlt }}" src="{{ .Params.img | relURL }}" width="1000" height="500" />
   {{ end }}
   <main>  
   {{- block "main" . -}}{{- end -}}
