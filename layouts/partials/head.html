@@ -4,10 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="{{ .Site.Params.author }}" />
   <meta name="description" content="{{ .Site.Params.description }}" />
-  <title>{{ if isset .Params "slug" }} {{.Page.Slug}} ▪ {{ .Site.Title }} {{ else }} {{ .Site.Title }} {{ end }}</title>
+  <title>{{ if isset .Params "slug" }} {{.Page.Slug}} | {{ .Site.Title }} {{ else }} {{ .Site.Title }} {{ end }}</title>
 
   {{ $style := resources.Get "css/style.css" | minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   {{ $applefavicon := resources.Get "images/apple-touch-icon.webp" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $applefavicon.RelPermalink }}" />
@@ -15,4 +19,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32.RelPermalink }}" />
   {{ $favicon16 := resources.Get "images/favicon-16x16.webp" }}
   <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16.RelPermalink }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
