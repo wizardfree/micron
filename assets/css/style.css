@@ -28,6 +28,7 @@ aside * {
 }
 
 nav:not(#TableOfContents) {
+  height: 4em;
   display: flex;
   justify-content: space-around;
   align-items: center;
