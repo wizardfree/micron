@@ -1,14 +1,80 @@
 html {
-  max-width: 72ch;
-  padding: 3em 1em;
-  margin: auto;
-  font-size: 1.15em;
   line-height: 1.45;
-  font-family: sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif, 'IBM Plex Mono', monospace;
 }
 
-h1,h2,h3,h4,h5,h6 {
+main,
+header {
+  max-width: 72ch;
+  margin: auto;
+  padding: 0 1em;
+}
+
+footer {
+  max-width: 72ch;
+  margin: 2em auto;
+  color: #BDC3C7;
+}
+
+aside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+aside * {
+  margin-left: 1em;
+}
+
+nav:not(#TableOfContents) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2em;
+  /* padding: 0 4em; */
+  border-bottom: #595959 solid 1px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+nav img {
+  width: 32px;
+}
+
+nav ul:not(#TableOfContents *) {
+  list-style: none;
+}
+
+nav ul li:not(#TableOfContents *) {
+  display: inline;
+  margin-right: 1em;
+}
+
+body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 3em 0 1em;
+}
+
+h5 {
+  background-color: #1d1d1d;
+  color: #ECF0F1;
+  padding: 1em;
+  max-width: fit-content;
+  font-family: monospace;
+  border-radius: 0.2rem;
 }
 
 h2:first-of-type {
@@ -16,7 +82,7 @@ h2:first-of-type {
 }
 
 li {
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
 
 li p {
@@ -28,9 +94,15 @@ img,
 pre,
 table,
 code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  border-radius: 0.2rem;
+}
+
+table {
   width: 100%;
   white-space: pre-wrap;
-  border-radius: 0.2rem;
 }
 
 code:not(.highlight *) {
