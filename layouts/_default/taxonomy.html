@@ -1,0 +1,12 @@
+{{ define "main" }}
+<ul>
+    {{ range $.Site.Taxonomies.tags.ByCount }}
+    {{ if gt .Count 1 }}
+      <li>
+        <a href="/tags/{{ .Name }}">{{ .Name }}</a>
+        <sup>({{ .Count }})</sup>
+      </li>
+    {{ end }}
+    {{end}}
+    </ul>
+{{ end }}
