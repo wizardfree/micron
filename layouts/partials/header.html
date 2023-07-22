@@ -1,27 +1,9 @@
-<h3><a href="/">{{ .Site.Title }}</a> <span><a href="/archive">archive</a>
-    &nbsp;
-    &squf;
-    &nbsp;
-        <a href="/links">links</a>
-        &nbsp;
-&squf;
-&nbsp;
-        <a href="/tags">tags</a>
-        &nbsp;
-&squf;
-&nbsp;
-        <a href="/certs">certifications</a></span></h3>
+{{ $logo := resources.Get "images/wizardv2.webp" }}
+<a href="/"><img src="{{ $logo.RelPermalink }}" alt=""></a>
 
-{{ if .Params.Date }}
-<h2>{{ .Page.Title }}</h2>
-<i>{{ .Date.Format "January 2, 2006" }}</i>
-
-{{ with .Params.tags }}
-&nbsp;
-{{ range $i, $e := . }}
-  {{ if $i }}&nbsp;&squf;&nbsp;{{ end }}
-  <a href="{{ "tags/" | absURL }}{{ $e | urlize }}" rel="tag">{{ $e }}</a>
-{{ end }}
-{{ end }}
-
-{{ end }}
+<ul>
+        <li><a href="/archive">/archive</a></li>
+        <li><a href="/links">/links</a></li>
+        <li><a href="/tags">/tags</a></li>
+        <li><a href="/certs">/certs</a></li>
+</ul>
