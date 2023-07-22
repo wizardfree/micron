@@ -1,6 +1,7 @@
 html {
-  line-height: 1.45;
-  font-family: 'IBM Plex Sans', sans-serif, 'IBM Plex Mono', monospace;
+  font-size: 1.15em;
+  line-height: 1.75;
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif
 }
 
 main,
@@ -13,7 +14,7 @@ header {
 footer {
   max-width: 72ch;
   margin: 2em auto;
-  color: #BDC3C7;
+  color: #34495E;
 }
 
 aside {
@@ -27,13 +28,20 @@ aside * {
   margin-left: 1em;
 }
 
+a {
+  color: #3498DB;
+}
+
+a:visited {
+  color: #9B59B6;
+}
+
 nav:not(#TableOfContents) {
   height: 4em;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 2em;
-  /* padding: 0 4em; */
   border-bottom: #595959 solid 1px;
   position: sticky;
   top: 0;
@@ -83,7 +91,7 @@ h2:first-of-type {
 }
 
 li {
-  line-height: 1.8rem;
+  line-height: 1.6rem;
 }
 
 li p {
@@ -99,6 +107,10 @@ code {
   word-wrap: normal;
   white-space: pre;
   border-radius: 0.2rem;
+}
+
+code {
+  font-size: 0.8em !important;
 }
 
 table {
@@ -146,4 +158,33 @@ h3 span {
 blockquote {
   border-left: 2px #1d1d1d solid;
   padding-left: 0.5rem;
+}
+
+.footnotes li {
+  margin: 1em 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body, nav:not(#TableOfContents) {
+    background-color: #1d1d1d;
+    color: #ECF0F1;
+  }
+
+  footer {
+    color: #BDC3C7;
+  }
+
+  h5 {
+    background-color: #ECF0F1;
+    color: #1d1d1d;
+  }
+
+  code:not(.highlight *) {
+    background-color: #282a36;
+    border: 1px solid #f8f8f2;
+  }
+
+  blockquote {
+    border-left: 2px #ECF0F1 solid;
+  }
 }
