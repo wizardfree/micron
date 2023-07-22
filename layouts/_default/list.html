@@ -1,13 +1,14 @@
 {{ define "main" }}
-<h2>{{.Page.Title}} 🔖</h2>
-<ul>
-    {{ range $.Site.Taxonomies.tags.ByCount }}
-    {{ if gt .Count 1 }}
-      <li>
-        <a href="/tags/{{ .Name }}">{{ .Name }}</a>
-        <sup>({{ .Count }})</sup>
-      </li>
-    {{ end }}
-    {{end}}
-    </ul>
+<h2>{{.Page.Title}}</h2>
+  {{ range (.Site.RegularPages.GroupByDate "2006") }} {{ if (gt .Key 1) }}
+  <h4>[{{ .Key }}]</h4>
+  {{ end }}
+  <ul>
+    {{ range (.Pages) }} {{ if (ne .Params.hidden true) }}
+    <li>
+      {{ partial "post_summary.html" . }}
+    </li>
+    {{ end }} {{ end }}
+  </ul>
+  {{ end }}
 {{ end }}
