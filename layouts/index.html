@@ -4,10 +4,12 @@
 
 <h4>Latest posts:</h4>
 <ul>
-{{ range .Pages.ByDate.Reverse | first 3 }}
+{{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.hidden" "!=" true))}}
     <li>
         {{ partial "post_summary.html" . }}
-    </li>
+    </li>  
+    {{ end }}
 {{ end }}
 </ul>
 
