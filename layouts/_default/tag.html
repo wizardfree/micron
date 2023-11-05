@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h3>Posts tagged: <u>{{.Title}}</u></h3>
+<h3>Posts tagged: <strong>{{.Title}}</strong></h3>
 {{ range .Pages.ByDate.Reverse }}
 <ul>
   {{ if (ne .Params.hidden true) }}
