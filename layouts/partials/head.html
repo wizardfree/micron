@@ -9,9 +9,6 @@
   {{ $style := resources.Get "css/style.css" | minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
-  {{ $normalize := resources.Get "css/normalize.css" | minify }}
-  <link rel="stylesheet" href="{{ $normalize.RelPermalink }}" integrity="{{ $normalize.Data.Integrity }}">
-
   {{ $applefavicon := resources.Get "images/apple-touch-icon.webp" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $applefavicon.RelPermalink }}" />
   {{ $favicon32 := resources.Get "images/favicon-32x32.webp" }}

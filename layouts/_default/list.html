@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h2>{{.Page.Title}}</h2>
   {{ range (.Site.RegularPages.GroupByDate "2006") }} {{ if (gt .Key 1) }}
-  <h4>[{{ .Key }}]</h4>
+  <h3>[{{ .Key }}]</h3>
   {{ end }}
   <ul>
     {{ range (.Pages) }} {{ if (ne .Params.hidden true) }}
